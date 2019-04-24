@@ -7,9 +7,15 @@
 <html>
 	<head>
 		<title>Single - Future Imperfect by HTML5 UP</title>
-		<meta charset="utf-8" />
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>	 
+        <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
 	</head>
 	<body class="single is-preload">
 
@@ -18,13 +24,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="../index.html">Dive into Tech</a></h1>
+						<h1><a href="../../index.html">Dive into Tech</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="../little_ideas_index.html">LITTLE IDEAS</a></li>
-								<li><a href="../dm_index.html">DATA MINING</a></li>
-								<li><a href="../dl_index.html">DEEP LEARNING</a></li>
-								<li><a href="../thoughts_index.html">THOUGHTS</a></li>
+								<li><a href="../../little_ideas_index.html">LITTLE IDEAS</a></li>
+								<li><a href="../../dm_index.html">DATA MINING</a></li>
+								<li><a href="../../dl_index.html">DEEP LEARNING</a></li>
+								<li><a href="../../thoughts_index.html">THOUGHTS</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -84,7 +90,7 @@
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="../index.html" class="button large fit">Home Page</a></li>
+									<li><a href="../../index.html" class="button large fit">Home Page</a></li>
 								</ul>
 							</section>
 
@@ -97,21 +103,31 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="single.html">AT THE VERY FIRST</a></h2>
-										<p>SOME thoughts before starting</p>
+										<h2><a href="single.html">线性回归</a></h2>
+										<p>假设噪声为高斯白噪声前提下的极大似然估计和最小二乘法</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2019-04-23">April 23, 2019</time>
-										<a href="#" class="author"><span class="name">Ivan Zhu</span><img src="../images/zhu.jpg" alt="" /></a>
+										<a href="#" class="author"><span class="name">Ivan Zhu</span><img src="../../images/zhu.jpg" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="images/SF.jpg" alt="" /></span>
-								<p>就用在美国拍的第一张照片作为封面吧。来计算机圣地UC Berkeley学习也已将近一个学期了，感触颇多，收获颇多。</p>
-								<p>创建这个Blog一方面是为了将平时所记录的有价值的东西分享出来，另一方面是便于以后自己忘了一些知识回头来温习。因为很多是英文文献，所以对应的也就是英文的note。因为Blog内容主要是技术分享，所以就拙劣地仿照了李沐老师给STAT 157官网的取名，叫做Dive into Tech了。</p>
-								<p>如果您有好的建议，欢迎联系博主: iiivanzhu@gmail.com</p>
+<!--								<span class="image featured"><img src="images/SF.jpg" alt="" /></span>-->
+								<p>考虑一堆大致呈线性分布的样本，假设噪声呈高斯分布，即：</p>
+							  	<p>$y=w^Tx+b+\epsilon$</p>
+								<p>其中，$\epsilon$~$N(0,\sigma^2)$</p>
+								<p>因而，对于给定的x，我们得到对应的y的概率为：</p>
+								<p>$p(y|x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{1}{2\sigma^2}(y-w^Tx-b)^2)$</p>
+								<p>根据最大似然估计，我们要使得到样本的概率最大化，即：</p>
+								<p>$\max{p(Y|X)}=\max{\Pi_{i=1}^{n}{p(y^{(i)}|x^{(i)})}}$</p>
+								<p>其中，Y和X指代所有样本。</p>
+								<p>取logarithm以后似然函数的单调性不变，因此为了简化计算我们对似然函数取logarithm，所以目标变成了：</p>
+								<p>$\max{\log{\Pi_{i=1}^{n}{p(y^{(i)}|x^{(i)})}}}$</p>
+								<p>也就是：</p>
+								<p>$\min{-\log{\Pi_{i=1}^{n}{p(y^{(i)}|x^{(i)})}}}=\min \sum_{i=1}^{n}{\frac{1}{2}log(2\pi\sigma^2)+\frac{1}{2\sigma^2}(y^{(i)}-w^Tx^{(i)}-b)^2}$</p>
+								<p>在上式中，第一项仅与$\sigma$有关，为客观不可控因素，因而由第二项可见，在线性回归问题中，若样本噪声为高斯白噪声，则利用极大似然估计来求线性模型的weight和bias (从而获取样本真实分布，即线性模型和以$\sigma$为标准差的高斯白噪声的叠加) 就等效为最小二乘法。</p>
 								<footer>
 									<ul class="stats">
-										<li><a href="#">THOUGHTS</a></li>
+										<li><a href="../../little_ideas_index.html">Little Ideas</a></li>
 <!--
 										<li><a href="#" class="icon fa-heart">28</a></li>
 										<li><a href="#" class="icon fa-comment">128</a></li>
@@ -137,11 +153,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
 
 	</body>
 </html>
