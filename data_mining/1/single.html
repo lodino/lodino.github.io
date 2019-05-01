@@ -119,7 +119,7 @@
 							  	<p>Now introduce the metric (silhouette coefficient) used to evaluate the result of clustering: </p>
 								<p>Assume we have data point o in cluster $C_i$, then we first define: </p>
 								<p>$$a(o)=\frac{\sum_{o'\in C_i,o'\neq o}{dist(o,o')}}{|C_i|-1}$$</p>
-								<p>Which is the average distance from the point o to the points in the same cluster.</p>
+								<p>Which is the average distance from the point o to the other data points in the same cluster.</p>
 								<p>Then we define:</p>
 								<p>$$b(o)=\min_{Cj,1\leq j\leq k,j\neq i}{\frac{\sum_{o'\in C_j}{dist(o,o')}}{|C_j|}}$$</p>
 								<p>Which denotes the min distance from o to the data points in other clusters. </p>
