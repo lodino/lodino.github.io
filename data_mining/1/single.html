@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Clustering</title>
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>	 
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="shortcut icon" href="../../favicon.ico?v=2" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../../index.html">Dive into Tech</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="../../little_ideas_index.html">LITTLE IDEAS</a></li>
+								<li><a href="../../dm_index.html">DATA MINING</a></li>
+								<li><a href="../../dl_index.html">DEEP LEARNING</a></li>
+								<li><a href="../../thoughts_index.html">THOUGHTS</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<form id="search" method="get" action="#">
+			  							<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu"> </li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="../../index.html" class="button large fit">Home Page</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="single.html">Clustering</a></h2>
+										<p>Mainly K-means</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2019-04-23">April 30, 2019</time>
+										<a href="#" class="author"><span class="name">Ivan Zhu</span><img src="../../images/zhu.jpg" alt="" /></a>
+									</div>
+								</header>
+<!--								<span class="image featured"><img src="images/SF.jpg" alt="" /></span>-->
+								<p>Firstly talk about the difference between clustering and classfication: <br>
+								Generally speaking, clustering is grouping data points with respect to a similarity metric, while classification is grouping datapoints with respect to a target.</p>
+								<p>There are basically 3 types of clustering: Partitioning, Density-based and Hierarchical (as the diagrams shown in the same order below). But today I'm only introducing k-means, a kind of Partitioning, which is the most basic clustering method. </p>
+								<p align="center"><img src="images/partitioning.png" title="partitioning" alt="" style="width: 192px;height: 192px" /><img src="images/density-based.png" title="density-based" alt="" style="width: 192px;height: 192px" /><img src="images/hierarchical.png" title="hierarchical" alt="" style="width: 192px;height: 192px" /></p>
+								<p>Steps of k-means are as below (given k):</p>
+								<p>&nbsp;&nbsp;- Randomly choose k data points to serve as initial centroids.</p>
+								<p>&nbsp;&nbsp;- Until there's no change in cluster assignments (reach max iteration), do:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;(i) (re)assign each adta point to the centroid to which the data point is closest in euclidiean space.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;(ii) update the cluster centroid values to represent means of the data points of each cluster.</p>
+								<p>&nbsp;&nbsp;- Return the membership of each data point.</p>
+							  	<p>Now introduce the metric (silhouette coefficient) used to evaluate the result of clustering: </p>
+								<p>Assume we have data point o in cluster $C_i$, then we first define: </p>
+								<p>$$a(o)=\frac{\sum_{o'\in C_i,o'\neq o}{dist(o,o')}}{|C_i|-1}$$</p>
+								<p>Which is the average distance from the point o to the points in the same cluster.</p>
+								<p>Then we define:</p>
+								<p>$$b(o)=\min_{Cj,1\leq j\leq k,j\neq i}{\frac{\sum_{o'\in C_j}{dist(o,o')}}{|C_j|}}$$</p>
+								<p>Which denotes the min distance from o to the data points in other clusters. </p>
+								<p>Then finally we have silhouette coefficient: </p>
+								<p>$$s(o)=\frac{b(o)-a(o)}{max\{a(o), b(o)\}}$$</p>
+								<p>Note that the silhouette coefficient of the whole cluster is the average of silhouette coefficients of all data points. And because it's quite sensitive to the scale of the feature (the scales of different dimension may vary considerably), we have to normalize the data first before clustering. </p>
+								<p>The range of s(o) is (-1,1).</p>
+								<p>In the best cases, s(o) is close to 1 (a(o)$\rightarrow$0, b(o)$\rightarrow\infty$), in the worst cases, s(o) is close to -1 (a(o)$\rightarrow\infty$, b(o)$\rightarrow$0).</p>
+								<p>Then finally in this article, I'll introduce the Elbow Method which can be used to select the best "k" for clustering.</p>
+								<p>At first, see the definition of SSE (sum of square error):</p>
+								<p>$$SSE=\sum_{i=1}^{k}{\sum_{p\in C_i}{dist(p, centroid_i)^2}}$$</p>
+								<p>Here we can see that the SSE can measure how "compact" the clustering is (the closer that points are to the centroids, the smaller SSE we can get). But SSE will definitely keep decreasing with increasing of k. When k equals the number of points, the SSE reachs its minimum, however, it can't be the best k because it's too "detailed". We expect to have the k being not too large (less categories, more generality), but also SSE being not too large. It's kind of like a trade-off between accuracy and generality. </p>
+								<p>So how do we deal with this problem? We have the Elbow Method! </p>
+								<p align="center"><img src="images/elbow.png" title="elbow method" alt="" style="width: 192px;height: 192px" /></p>
+								<p>Just as the diagram shown above, the point circled is the "elbow", where the derivative of the curve (decreasing rate of SSE) decrease most drastically. Then we'll choose the "elbow" as the best "k" that we select (best keeps both accuracy and generality).</p>
+								<p>That's all for k-means. I'll write about an advanced method of clustering in the next article which is basically density-based! </p>
+								<footer>
+									<ul class="stats">
+										<li><a href="../../dm_index.html">Data Mining</a></li>
+<!--
+										<li><a href="#" class="icon fa-heart">28</a></li>
+										<li><a href="#" class="icon fa-comment">128</a></li>
+-->
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="http://112.74.179.136/wordpress/"><img src="../../images/blogroll1.gif" title="nightmorning's blog" alt="" style="border-radius: 50%; width: 16px;height: 16px" /></a></li>
+							<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
