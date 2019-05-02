@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>我被自己GAN哭了</title>
+		<script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>	 
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="shortcut icon" href="../../favicon.ico?v=2" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../../index.html">Dive into Tech</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="../../little_ideas_index.html">LITTLE IDEAS</a></li>
+								<li><a href="../../dm_index.html">DATA MINING</a></li>
+								<li><a href="../../dl_index.html">DEEP LEARNING</a></li>
+								<li><a href="../../thoughts_index.html">THOUGHTS</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<form id="search" method="get" action="#">
+			  							<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu"> </li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>NOT YET OPEN</h3>
+											<p></p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="../../index.html" class="button large fit">Home Page</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="single.html">我被自己GAN哭了</a></h2>
+										<p>近几周疯狂搞GAN的感想</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2019-05-01">May 1, 2019</time>
+										<a href="#" class="author"><span class="name">Ivan Zhu</span><img src="../../images/zhu.jpg" alt="" /></a>
+									</div>
+								</header>
+<!--								<span class="image featured"><img src="images/SF.jpg" alt="" /></span>-->
+								<p>我当初是真的万万没想到就这学期选的课怎么就跟GAN扯上关系了！WAT？GAN是什么？</p>
+							  	<p>哦哦，介绍一下，GAN全称是Generative Adversarial Network，中文名叫生成对抗网络，一般用于图片的生成。它的种类很多，包括PatchGAN，CGAN，InfoGAN等等，也包括我用的pix2pix。但是他们的主体思路是一致的，就是设置两个神经网络，一个叫Generator，另一个叫Discriminator。Generator专门生成图片，discriminator专门用于鉴别图片是生成的还是原始的，两个网络共同训练成长，相互促进，最后达到良好的效果。具体就不细讲了，我是来吐槽的！DAMN IT！</p>
+								<p>其实GAN的大致原理和思路不难懂，但是挡在我面前的三座大山着实令人抓狂！他们分别是：训练集的获取，模型具体结构的确定(卷积层的各种hyperparameter...)以及机器性能的问题。</p>
+								<p>我们的final project想要做的是将卡通人脸转化成现实中的人脸。当初提到这个idea就感觉到了满满的ambition，也不知道自己是怎么搞下去的。</p>
+								<p>直接训练网络将卡通人脸变成现实中的显然不大现实，因为原始的卡通图片噪声太大，神经网络难以提取准确的提取面部特征。所以问题转化成面部什么特征需要提取，想来想去觉得轮廓是主要的。所以就找edge detection相关的code和algorithm。在试过各种之后，点名批评OpenCV自带的边提取，效果不好，再点名表扬Google的XDoG！效果很不错！如下图：</p>
+								<p align="center"><img src="images/Ben_Affleck_origin.jpg" title="original" alt="" style="width: 192px;height: 192px" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Ben_Affleck_line.jpg" title="lines" alt="" style="width: 192px;height: 192px" /></p>
+								<p>所以这样我们就可以自己生成训练集辽！</p>
+								<p>所以就确定了想法，加一个intermediate step，从 cartoon$\rightarrow$reality 变成了 cartoon$\rightarrow$edges$\rightarrow$reality。这样我们可以先降低图像的噪声，提取面部的一些重要的轮廓特征，这样能够大幅提升训练神经网络生成对应人脸的可行性。</p>
+								<p>然后就是神经网络的结构。归根结底，pix2pix只是确定了网络图的流向等等，具体网络的结构还是要靠自己敲定。所以我敲定了一二周，敲定失败了，所以就理直气壮 (划掉) 地用了官方原始的U-Net (用的是残差block堆起来的) 作为Generator (原本是用于生成街景的) ，因为想想本质上都是image translation，所以应该是没有太大问题的。至于Discriminator也就理所应当 (也划掉) 地用了官方的Convolutional “PatchGAN” Classifier，大致就是针对图像的各个ROI (image patches) 进行classify。</p>
+								<p>这块是真的搞死个人，课上学的Autoencoder啥的根本没用上。</p>
+								<p>最后是机器性能，不得不喊一句MMP。在自己的辣鸡2017版MBA上跑了一整天才训练了寥寥几个epoch的情况下，我想起了平时用的colab，搭载个GPU快得飞起来。我计时器算了一下，大致也就是本机的几百倍速度吧2333333。而且还是免费的，白嫖的感觉真好：）</p>
+								<p>最后在colab上跑了半天不到用小样本 (600多) 训练了200个epoch，感觉效果还行 (基于小样本短时间的前提) 。</p>
+								<p>先放一下根据上面的那张照片提取的线条做出来的图（他不在训练集里）</p>
+								<p align="center"><img src="images/Ben_Affleck_generated.jpg" title="generated" alt="" style="width: 192px;height: 192px" /></p>
+								<p>然后放一下随便抓的一张cartoon做的：</p>
+								<p align="center"><img src="images/1_origin.png" title="original" alt="" style="width: 192px;height: 192px" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/1_line.jpg" title="lines" alt="" style="width: 192px;height: 192px" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/1_generated.jpg" title="generated" alt="" style="width: 192px;height: 192px" /></p>
+								<p>不对比看我也没发现生成图脖子这里给凭空生成的类似立领的东西原来原图里是没有的！</p>
+								<p>然后我随便请了一个朋友画个人脸 (线条画) ，然后尝试用模型生成了一下，然后我枯了。</p>
+								<p align="center"><img src="images/me.png" title="me" alt="" style="width: 192px;height: 192px" /></p>
+								<p>尤其是这个嘴真鬼畜。总结了一下，一是因为这个网络还是训练集太小，训练的时间也不够长，能力有限。二是因为这毕竟是人画的，不是从图片里提取的，所以结构总会不够逼真，显得比较不像真人那么shuai (第四声) 。头发感觉还行吧。</p>
+								<p>总结完毕，搞了一个月还算可以，队友又提出了下一步的针对性优化，GAN TMD！(在此之前，打一把LOL奖励一下自己)</p>
+								<footer>
+									<ul class="stats">
+										<li><a href="../../thoughts_index.html">Thoughts</a></li>
+<!--
+										<li><a href="#" class="icon fa-heart">28</a></li>
+										<li><a href="#" class="icon fa-comment">128</a></li>
+-->
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="http://112.74.179.136/wordpress/"><img src="../../images/blogroll1.gif" title="nightmorning's blog" alt="" style="border-radius: 50%; width: 16px;height: 16px" /></a></li>
+							<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
