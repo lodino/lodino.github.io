@@ -7,4 +7,4 @@ date: 2021-01-01
 venue: 'SIGMOD'
 paperurl: 'http://lodino.github.io/files/sigmod21.pdf'
 ---
-<!-- [Download paper here](http://lodino.github.io/files/sigmod21.pdf) -->
+[Download paper here](http://lodino.github.io/files/sigmod21.pdf)
