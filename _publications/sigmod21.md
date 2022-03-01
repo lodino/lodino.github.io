@@ -7,4 +7,5 @@ date: 2021-01-01
 venue: 'SIGMOD'
 paperurl: 'http://lodino.github.io/files/sigmod21.pdf'
 ---
+Rundong Li, Pinghui Wang, **Jiongli Zhu**, Junzhou Zhao, Jia Di, Xiaofei Yang, Kai Ye.
 [Download paper here](http://lodino.github.io/files/sigmod21.pdf)
