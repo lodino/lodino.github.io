@@ -5,7 +5,10 @@ permalink: /publication/ijcaiws20
 excerpt: '(Best Paper Award)'
 date: 2020-01-01
 venue: 'IJCAI Workshop on Disease Computational Modeling'
-# paperurl: 'http://lodino.github.io/files/sigmod22.pdf'
 ---
-Chenhao Lin, **Jiongli Zhu**, Chao Shen, Pengwei Hu, Qian Wang.<br><br>
+Chenhao Lin, **Jiongli Zhu**, Chao Shen, Pengwei Hu, Qian Wang.<br>
+
+<font size=2>The deep learning based approaches have achieved remarkable success in diabetic retinopathy detection. Due to the accountability in medical diagnosis, the interpretability of computer-aided diagnosis approaches has been investigated recently. However, few of existing approaches make full use of the explainable evidences to improve the diagnosis accuracy. In this paper, we propose an Explainable Lesion Learning and Generation (ELLG) framework to study the interpretability of diabetic retinopathy detection and achieve more accurate diagnosis. We first generate visual explanations for diabetic retinopathy diagnosis using proposed Gated Multi-layer Saliency Map (GMSM). Then we iteratively generate fundus images with lesions and include them for training to learn more robust lesion features. Our method not only provides more accurate explainable evidences but also addresses the data imbalance problem in diabetic retinopathy detection, therefore results in highly improved detection performance without increasing time-complexity during the inference. The experimental results on two databases demonstrate the efficiency of the proposed approach.</font>
+<br>
+
 [Download](http://lodino.github.io/files/ijcaiws20.pdf)
