@@ -8,5 +8,5 @@ venue: 'SIGMOD'
 # paperurl: 'http://lodino.github.io/files/sigmod22.pdf'
 ---
 Romila Pradhan, **Jiongli Zhu**, Boris Glavic, Babak Salimi.<br><br>
-[Download](http://lodino.github.io/files/sigmod22.pdf)<br>
+[Download](https://dl.acm.org/doi/10.1145/3514221.3517886)<br>
 [Project Website](https://gopher-sys.github.io/)
