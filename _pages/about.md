@@ -15,4 +15,4 @@ NEWS
 * **04/22** Received SIGMOD 2022 Student Travel Award
 
 
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=EDRFLLmYV_04jV0XECpDJonac7HIQqparNoTmPbFMvo&cl=ffffff&w=a"></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=EDRFLLmYV_04jV0XECpDJonac7HIQqparNoTmPbFMvo'></script>
