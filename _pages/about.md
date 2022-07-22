@@ -15,6 +15,9 @@ NEWS
 * **04/22** Received SIGMOD 2022 Student Travel Award
 
 
+---
+I am looking for Research Intern/Machine Learning Intern roles at summer 2023. Please feel free to reach out to me if you think I would be a good fit.
+---
 
 
 
