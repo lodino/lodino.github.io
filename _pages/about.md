@@ -25,4 +25,4 @@ NEWS
 
 
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=EDRFLLmYV_04jV0XECpDJonac7HIQqparNoTmPbFMvo'></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=200&t=n&d=EDRFLLmYV_04jV0XECpDJonac7HIQqparNoTmPbFMvo&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
