@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Master student in Computer Science at University of California San Diego. I am currently working in the research group directed by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University. My research interest mainly includes fair and explainable ML, ML model debugging and data cleaning.
+I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working in the research group directed by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, causal inference, ML model debugging and data cleaning.
 
 ---
 
