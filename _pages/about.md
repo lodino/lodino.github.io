@@ -14,14 +14,15 @@ I am a Ph.D. student in Data Science at University of California, San Diego. I a
 
 NEWS
 ======
-* **01/23** Transferred to the Data Science PhD program at UCSD
-* **04/22** Received SIGMOD 2022 Student Travel Award.
+* **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
+* **01/23** Transferred to the Data Science PhD program at UCSD.
+* **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
 
-
+<!-- 
 ---
 
 *I am looking for Research Intern/Machine Learning Intern roles at summer 2023. Please feel free to reach out to me if you think I would be a good fit.*
-
+ -->
 ---
 
 
