@@ -8,12 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working in the research group directed by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, causal inference, ML model debugging and data cleaning.
+I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working with Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, causal inference, ML model debugging and data cleaning.
 
 ---
 
 NEWS
 ======
+* **06/23** Our work [CRAB](https://lodino.github.io/publication/vldb23) got accepted at VLDB'23!
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
 * **01/23** Transferred to the Data Science PhD program at UCSD.
 * **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.

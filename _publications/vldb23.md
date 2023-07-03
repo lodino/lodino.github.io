@@ -1,10 +1,10 @@
 ---
 title: "Consistent Range Approximation for Fair Predictive Modeling."
 collection: publications
-permalink: /publication/crab
+permalink: /publication/vldb23
 excerpt: ''
 date: 2023-02-01
-venue: 'arXiv'
+venue: 'VLDB'
 ---
 **Jiongli Zhu**, Sainyam Galhotra, Nazanin Sabri, Babak Salimi.<br>
 
