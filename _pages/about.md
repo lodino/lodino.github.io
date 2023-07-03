@@ -15,6 +15,7 @@ I am a Ph.D. student in Data Science at University of California, San Diego. I a
 NEWS
 ======
 * **06/23** Our work [CRAB](https://lodino.github.io/publication/vldb23) got accepted at VLDB'23!
+* **03/23** Gave a talk about our recent work [CRAB](https://arxiv.org/abs/2212.10839) at UCSD DB Seminar.
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
 * **01/23** Transferred to the Data Science PhD program at UCSD.
 * **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
