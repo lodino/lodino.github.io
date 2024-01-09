@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working with Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, causal inference, ML model debugging and data cleaning.
+I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working with Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, automated data cleaning, and causal inference.
 
 ---
 
@@ -20,11 +20,29 @@ NEWS
 * **01/23** Transferred to the Data Science PhD program at UCSD.
 * **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
 
-<!-- 
 ---
 
-*I am looking for Research Intern/Machine Learning Intern roles at summer 2023. Please feel free to reach out to me if you think I would be a good fit.*
- -->
+Education
+======
+* Ph.D. in Data Science, University of California San Diego, 2023 -
+* M.S. in Computer Science, University of California San Diego, 2021 - 2022
+* B.Eng. in Information Engineering, Xi'an Jiaotong University, 2017 - 2021
+
+---
+
+Services
+======
+**Program Commitee**:
+* Facct: 2023, 2024
+* ECIR: 2024
+
+**Reviewer / External Reviewer**: 
+* SIGMOD: 2022, 2023, 2024
+
+---
+
+*I am looking for Research Intern/Machine Learning Intern roles at summer 2024. Please feel free to reach out to me if you think I would be a good fit.*
+
 ---
 
 
