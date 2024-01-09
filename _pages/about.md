@@ -33,7 +33,7 @@ Education
 Services
 ======
 **Program Commitee**:
-* Facct: 2023, 2024
+* FAccT: 2023, 2024
 * ECIR: 2024
 
 **Reviewer / External Reviewer**: 
