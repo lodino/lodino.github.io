@@ -14,6 +14,7 @@ I am a Ph.D. student in Data Science at University of California, San Diego. I a
 
 NEWS
 ======
+* **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
 * **06/23** Our work [CRAB](https://lodino.github.io/publication/vldb23) got accepted at VLDB'23!
 * **03/23** Gave a talk about our recent work [CRAB](https://arxiv.org/abs/2212.10839) at UCSD DB Seminar.
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
@@ -39,9 +40,9 @@ Services
 **Reviewer / External Reviewer**: 
 * SIGMOD: 2022, 2023, 2024
 
----
+<!-- ---
 
-*I am looking for Research Intern/Machine Learning Intern roles at summer 2024. Please feel free to reach out to me if you think I would be a good fit.*
+*I am looking for Research Intern/Machine Learning Intern roles at summer 2024. Please feel free to reach out to me if you think I would be a good fit.* -->
 
 ---
 
