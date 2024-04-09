@@ -14,9 +14,10 @@ I am a Ph.D. student in Data Science at University of California, San Diego. I a
 
 NEWS
 ======
+* **03/24** Our [new paper](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
 * **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
-* **06/23** Our work [CRAB](https://lodino.github.io/publication/vldb23) got accepted at VLDB'23!
-* **03/23** Gave a talk about our recent work [CRAB](https://arxiv.org/abs/2212.10839) at UCSD DB Seminar.
+* **06/23** Our work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
+* **03/23** Gave a talk about our recent work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) at UCSD DB Seminar.
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
 * **01/23** Transferred to the Data Science PhD program at UCSD.
 * **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
