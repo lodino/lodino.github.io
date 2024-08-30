@@ -14,6 +14,7 @@ I am a Ph.D. student in Data Science at University of California, San Diego. I a
 
 NEWS
 ======
+* **06/24** Started working as a research intern at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)).
 * **03/24** Our [new paper](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
 * **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
 * **06/23** Our work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
