@@ -8,16 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in Data Science at University of California, San Diego. I am currently working with Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California, San Diego. My research interest mainly includes fair and explainable ML, automated data cleaning, and causal inference.
+I am a Ph.D. student in Data Science at University of California San Diego, advised by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California San Diego. My research interest mainly includes trustworthy ML, automated data cleaning, and causal inference.
 
 ---
 
 NEWS
 ======
 * **06/24** Started working as a research intern at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)).
-* **03/24** Our [new paper](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
+* **03/24** Our [vision paper regarding data biases](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
 * **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
-* **06/23** Our work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
+* **06/23** Our recent work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
 * **03/23** Gave a talk about our recent work [CRAB](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) at UCSD DB Seminar.
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
 * **01/23** Transferred to the Data Science PhD program at UCSD.
@@ -40,6 +40,7 @@ Services
 * ECIR: 2024
 
 **Reviewer / External Reviewer**: 
+* ICLR: 2025
 * SIGMOD: 2022, 2023, 2024
 
 <!-- ---
