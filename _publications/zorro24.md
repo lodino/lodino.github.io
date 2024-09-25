@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/zorro24
 excerpt: ''
 date: 2024-05-28
-venue: 'Preprint'
+venue: 'NeurIPS'
 ---
 **Jiongli Zhu**, Su Feng, Boris Glavic, Babak Salimi.<br>
 

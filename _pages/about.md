@@ -14,6 +14,7 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 
 NEWS
 ======
+* **09/24** Our recent work [ZORRO](https://arxiv.org/pdf/2405.18549) got accepted at NeurIPS'24!
 * **06/24** Started working as a research intern at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)).
 * **03/24** Our [vision paper regarding data biases](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
 * **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
