@@ -37,11 +37,11 @@ Education
 Services
 ======
 **Program Commitee**:
+* ICLR: 2025
 * FAccT: 2023, 2024
 * ECIR: 2024
 
 **Reviewer / External Reviewer**: 
-* ICLR: 2025
 * SIGMOD: 2022, 2023, 2024
 
 <!-- ---
