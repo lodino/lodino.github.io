@@ -8,12 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in Data Science at University of California San Diego, advised by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California San Diego. My research interest mainly includes trustworthy ML, automated data cleaning, and causal inference.
+I am a Ph.D. student in Data Science at University of California San Diego, advised by Prof. [Babak Salimi](https://bsalimi.github.io/). I received my B.Eng. in Information Engineering from Xi'an Jiaotong University, and M.S. in Computer Science from University of California San Diego. I am interested in developing data-centric approaches for trustworthy Machine Learning (robustness, fairness, explainability, etc). 
 
 ---
 
 NEWS
 ======
+* **10/24** Serving on the PC of [ICLR 2025](https://iclr.cc/).
 * **09/24** Our recent work [ZORRO](https://arxiv.org/pdf/2405.18549) got accepted at NeurIPS'24!
 * **06/24** Started working as a research intern at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)).
 * **03/24** Our [vision paper regarding data biases](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
