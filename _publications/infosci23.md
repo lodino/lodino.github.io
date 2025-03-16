@@ -2,6 +2,7 @@
 title: "Sensitive Region-Aware Black-Box Adversarial Attacks."
 collection: publications
 permalink: /publication/infosci23
+excerpt: ''
 date: 2023-01-01
 venue: 'Information Sciences'
 authors: 'Chenhao Lin, Sicong Han, <strong>Jiongli Zhu</strong>, Qian Li, Chao Shen, Youwei Zhang, Xiaohong Guan'
