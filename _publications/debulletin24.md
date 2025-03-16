@@ -5,6 +5,7 @@ permalink: /publication/debulletin24
 excerpt: ''
 date: 2024-02-01
 venue: 'IEEE Data Engineering Bulletin'
+authors: '<strong>Jiongli Zhu</strong>, Babak Salimi'
 ---
 **Jiongli Zhu**, Babak Salimi.<br>
 

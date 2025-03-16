@@ -5,6 +5,7 @@ permalink: /publication/sigmod21
 excerpt: ''
 date: 2021-01-01
 venue: 'SIGMOD'
+authors: 'Rundong Li, Pinghui Wang, <strong>Jiongli Zhu</strong>, Junzhou Zhao, Jia Di, Xiaofei Yang, Kai Ye'
 ---
 Rundong Li, Pinghui Wang, **Jiongli Zhu**, Junzhou Zhao, Jia Di, Xiaofei Yang, Kai Ye.<br>
 

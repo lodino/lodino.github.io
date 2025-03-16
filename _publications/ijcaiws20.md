@@ -5,6 +5,7 @@ permalink: /publication/ijcaiws20
 excerpt: '(Best Paper Award)'
 date: 2020-01-01
 venue: 'IJCAI Workshop on Disease Computational Modeling'
+authors: 'Chenhao Lin, <strong>Jiongli Zhu</strong>, Chao Shen, Pengwei Hu, Qian Wang'
 ---
 Chenhao Lin, **Jiongli Zhu**, Chao Shen, Pengwei Hu, Qian Wang.<br>
 

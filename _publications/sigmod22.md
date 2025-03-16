@@ -5,6 +5,7 @@ permalink: /publication/sigmod22
 excerpt: ''
 date: 2022-01-01
 venue: 'SIGMOD'
+authors: 'Romila Pradhan, <strong>Jiongli Zhu</strong>, Boris Glavic, Babak Salimi'
 ---
 Romila Pradhan, **Jiongli Zhu**, Boris Glavic, Babak Salimi.<br>
 

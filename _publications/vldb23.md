@@ -5,6 +5,7 @@ permalink: /publication/vldb23
 excerpt: ''
 date: 2023-02-01
 venue: 'VLDB'
+authors: '<strong>Jiongli Zhu</strong>, Sainyam Galhotra, Nazanin Sabri, Babak Salimi'
 ---
 **Jiongli Zhu**, Sainyam Galhotra, Nazanin Sabri, Babak Salimi.<br>
 
