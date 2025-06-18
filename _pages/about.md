@@ -14,7 +14,7 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 
 NEWS
 ======
-* **03/25** Our demo paper for Zorro got accepted at SIGMOD'25!
+* **03/25** Our [demo paper for Zorro](https://dl.acm.org/doi/10.1145/3722212.3725143) got accepted at SIGMOD'25!
 * **02/25** Serving on the PC of [FAccT 2025](https://facctconference.org/2025/).
 * **12/24** Passed my preliminary exam!!
 * **10/24** Serving on the PC of [ICLR 2025](https://iclr.cc/).
@@ -40,13 +40,14 @@ Education
 
 Services
 ======
-**Program Commitee**:
+**Program Commitee / Reviewer**:
+* NeurIPS: 2025
 * ICLR: 2025
 * FAccT: 2023, 2024, 2025
 * ECIR: 2024
 
-**Reviewer / External Reviewer**: 
-* SIGMOD: 2022, 2023, 2024
+<!-- **Reviewer / External Reviewer**: 
+* SIGMOD: 2022, 2023, 2024 -->
 
 <!-- ---
 
