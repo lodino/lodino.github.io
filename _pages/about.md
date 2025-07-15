@@ -14,12 +14,14 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 
 NEWS
 ======
+* **07/25** Our recent work [Savage](https://arxiv.org/pdf/2506.01230) got accepted at VLDB'25!
+* **06/25** Started interning at TikTok working on generative recommender systems.
 * **03/25** Our [demo paper for Zorro](https://dl.acm.org/doi/10.1145/3722212.3725143) got accepted at SIGMOD'25!
 * **02/25** Serving on the PC of [FAccT 2025](https://facctconference.org/2025/).
 * **12/24** Passed my preliminary exam!!
 * **10/24** Serving on the PC of [ICLR 2025](https://iclr.cc/).
 * **09/24** Our recent work [Zorro](https://arxiv.org/pdf/2405.18549) got accepted at NeurIPS'24!
-* **06/24** Started interning at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)).
+* **06/24** Started interning at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)) working on vector search.
 * **03/24** Our [vision paper regarding data biases](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
 * **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
 * **06/23** Our recent work [Crab](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
