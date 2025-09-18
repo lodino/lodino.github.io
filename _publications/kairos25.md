@@ -5,7 +5,7 @@ permalink: /publication/kairos25
 excerpt: ''
 date: 2025-09-01
 venue: 'NeurIPS'
-authors: '<strong>Jiongli Zhu</strong><sup>*</sup>, Parjanya Prajakta Prashant<sup>*</sup>, Alex Cloninger, Babak Salimi'
+authors: '<strong>Jiongli Zhu</strong>*, Parjanya Prajakta Prashant*, Alex Cloninger, Babak Salimi'
 ---
 **Jiongli Zhu**\*, Parjanya Prajakta Prashant\*, Alex Cloninger, Babak Salimi.<br>
 
