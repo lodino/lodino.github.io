@@ -15,6 +15,7 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 NEWS
 ======
 * **09/25** Our recent work [Kairos](https://arxiv.org/pdf/2506.23799) got accepted at NeurIPS'25!
+* **08/25** Serving on the PC of [ICLR 2026](https://iclr.cc/).
 * **07/25** Our recent work [Savage](https://arxiv.org/pdf/2506.01230) got accepted at VLDB'26!
 * **06/25** Started interning at TikTok working on generative recommender systems.
 * **03/25** Our [demo paper for Zorro](https://dl.acm.org/doi/10.1145/3722212.3725143) got accepted at SIGMOD'25!
