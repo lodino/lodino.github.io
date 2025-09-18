@@ -1,9 +1,9 @@
 ---
 title: "Stress-Testing ML Pipelines with Adversarial Data Corruption."
 collection: publications
-permalink: /publication/vldb25
+permalink: /publication/vldb26
 excerpt: ''
-date: 2025-07-01
+date: 2026-01-01
 venue: 'VLDB'
 authors: '<strong>Jiongli Zhu</strong>, Geyang Xu, Felipe Lorenzi, Boris Glavic, Babak Salimi'
 ---
