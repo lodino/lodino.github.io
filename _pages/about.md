@@ -14,7 +14,10 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 
 NEWS
 ======
+<details>
+<summary>
 * **09/25** Our recent work [Kairos](https://arxiv.org/pdf/2506.23799) got accepted at NeurIPS'25!
+</summary>
 * **08/25** Serving on the PC of [ICLR 2026](https://iclr.cc/).
 * **07/25** Our recent work [Savage](https://arxiv.org/pdf/2506.01230) got accepted at VLDB'26!
 * **06/25** Started interning at TikTok working on generative recommender systems.
@@ -31,7 +34,7 @@ NEWS
 * **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
 * **01/23** Transferred to the Data Science PhD program at UCSD.
 * **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
-
+</details>
 ---
 
 Education
