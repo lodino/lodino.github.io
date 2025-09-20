@@ -15,25 +15,29 @@ I am a Ph.D. student in Data Science at University of California San Diego, advi
 NEWS
 ======
 <details>
-<summary>
-* **09/25** Our recent work [Kairos](https://arxiv.org/pdf/2506.23799) got accepted at NeurIPS'25!
-</summary>
-* **08/25** Serving on the PC of [ICLR 2026](https://iclr.cc/).
-* **07/25** Our recent work [Savage](https://arxiv.org/pdf/2506.01230) got accepted at VLDB'26!
-* **06/25** Started interning at TikTok working on generative recommender systems.
-* **03/25** Our [demo paper for Zorro](https://dl.acm.org/doi/10.1145/3722212.3725143) got accepted at SIGMOD'25!
-* **02/25** Serving on the PC of [FAccT 2025](https://facctconference.org/2025/).
-* **12/24** Passed my preliminary exam!!
-* **10/24** Serving on the PC of [ICLR 2025](https://iclr.cc/).
-* **09/24** Our recent work [Zorro](https://arxiv.org/pdf/2405.18549) got accepted at NeurIPS'24!
-* **06/24** Started interning at Microsoft Research ([Data Systems Group](https://www.microsoft.com/en-us/research/group/datasystems/)) working on vector search.
-* **03/24** Our [vision paper regarding data biases](http://sites.computer.org/debull/A24mar/p18.pdf) published at IEEE DE Bulletin (issue on data-centric responsible AI).
-* **02/24** Serving on the PC of [FAccT 2024](https://facctconference.org/2024/).
-* **06/23** Our recent work [Crab](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) got accepted at VLDB'23!
-* **03/23** Gave a talk about our recent work [Crab](https://dl.acm.org/doi/abs/10.14778/3611479.3611498) at UCSD DB Seminar.
-* **02/23** Serving on the PC of [FAccT 2023](https://facctconference.org/2023/).
-* **01/23** Transferred to the Data Science PhD program at UCSD.
-* **04/22** Received [SIGMOD 2022](https://sigmodconf.hosting.acm.org/2022/) Student Travel Award.
+  <summary>
+    <ul>
+      <li><strong>09/25</strong> Our recent work <a href="https://arxiv.org/pdf/2506.23799" target="_blank" rel="noopener noreferrer">Kairos</a> got accepted at NeurIPS&#39;25!</li>
+    </ul>
+  </summary>
+  <ul>
+    <li><strong>08/25</strong> Serving on the PC of <a href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">ICLR 2026</a>.</li>
+    <li><strong>07/25</strong> Our recent work <a href="https://arxiv.org/pdf/2506.01230" target="_blank" rel="noopener noreferrer">Savage</a> got accepted at VLDB&#39;26!</li>
+    <li><strong>06/25</strong> Started interning at TikTok working on generative recommender systems.</li>
+    <li><strong>03/25</strong> Our <a href="https://dl.acm.org/doi/10.1145/3722212.3725143" target="_blank" rel="noopener noreferrer">demo paper for Zorro</a> got accepted at SIGMOD&#39;25!</li>
+    <li><strong>02/25</strong> Serving on the PC of <a href="https://facctconference.org/2025/" target="_blank" rel="noopener noreferrer">FAccT 2025</a>.</li>
+    <li><strong>12/24</strong> Passed my preliminary exam!!</li>
+    <li><strong>10/24</strong> Serving on the PC of <a href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">ICLR 2025</a>.</li>
+    <li><strong>09/24</strong> Our recent work <a href="https://arxiv.org/pdf/2405.18549" target="_blank" rel="noopener noreferrer">Zorro</a> got accepted at NeurIPS&#39;24!</li>
+    <li><strong>06/24</strong> Started interning at Microsoft Research (<a href="https://www.microsoft.com/en-us/research/group/datasystems/" target="_blank" rel="noopener noreferrer">Data Systems Group</a>) working on vector search.</li>
+    <li><strong>03/24</strong> Our <a href="http://sites.computer.org/debull/A24mar/p18.pdf" target="_blank" rel="noopener noreferrer">vision paper regarding data biases</a> published at IEEE DE Bulletin (issue on data-centric responsible AI).</li>
+    <li><strong>02/24</strong> Serving on the PC of <a href="https://facctconference.org/2024/" target="_blank" rel="noopener noreferrer">FAccT 2024</a>.</li>
+    <li><strong>06/23</strong> Our recent work <a href="https://dl.acm.org/doi/abs/10.14778/3611479.3611498" target="_blank" rel="noopener noreferrer">Crab</a> got accepted at VLDB&#39;23!</li>
+    <li><strong>03/23</strong> Gave a talk about our recent work <a href="https://dl.acm.org/doi/abs/10.14778/3611479.3611498" target="_blank" rel="noopener noreferrer">Crab</a> at UCSD DB Seminar.</li>
+    <li><strong>02/23</strong> Serving on the PC of <a href="https://facctconference.org/2023/" target="_blank" rel="noopener noreferrer">FAccT 2023</a>.</li>
+    <li><strong>01/23</strong> Transferred to the Data Science PhD program at UCSD.</li>
+    <li><strong>04/22</strong> Received <a href="https://sigmodconf.hosting.acm.org/2022/" target="_blank" rel="noopener noreferrer">SIGMOD 2022</a> Student Travel Award.</li>
+  </ul>
 </details>
 ---
 
