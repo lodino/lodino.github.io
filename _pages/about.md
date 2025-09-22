@@ -40,24 +40,19 @@ NEWS
 
 Education
 ======
-Ph.D. in Data Science, University of California San Diego, 2023 -
-
-M.S. in Computer Science, University of California San Diego, 2021 - 2022
-
-B.E. in Information Engineering, Xi'an Jiaotong University, 2017 - 2021
+<div>Ph.D. in Data Science, University of California San Diego, 2023 -</div>
+<div>M.S. in Computer Science, University of California San Diego, 2021 - 2022</div>
+<div>B.E. in Information Engineering, Xi'an Jiaotong University, 2017 - 2021</div>
 
 ---
 
 Services
 ======
 **Program Commitee / Reviewer**:
-NeurIPS: 2025
-
-ICLR: 2025, 2026
-
-FAccT: 2023, 2024, 2025
-
-ECIR: 2024
+<div>NeurIPS: 2025</div>
+<div>ICLR: 2025, 2026</div>
+<div>FAccT: 2023, 2024, 2025</div>
+<div>ECIR: 2024</div>
 
 <!-- **Reviewer / External Reviewer**: 
 * SIGMOD: 2022, 2023, 2024 -->
