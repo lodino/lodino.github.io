@@ -1,5 +1,5 @@
 ---
-title: "Stress-Testing ML Pipelines with Adversarial Data Corruption."
+title: "KAIROS: Scalable Model-Agnostic Data Valuation."
 collection: publications
 permalink: /publication/kairos25
 excerpt: ''
