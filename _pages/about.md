@@ -52,6 +52,7 @@ Services
 <div><strong>Program Commitee / Reviewer:</strong></div>
 <div>NeurIPS: 2025</div>
 <div>ICLR: 2025, 2026</div>
+<div>VLDB: 2027</div>
 <div>FAccT: 2023, 2024, 2025</div>
 <div>ECIR: 2024</div>
 
