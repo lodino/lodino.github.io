@@ -16,6 +16,7 @@ NEWS
 ======
 <details>
 <summary>
+<div><strong>01/26</strong> Serving on the PC of <a href="https://vldb.org/2027/" target="_blank" rel="noopener noreferrer">VLDB 2027</a>.</div>
 <div><strong>09/25</strong> Our recent work <a href="https://arxiv.org/pdf/2506.23799" target="_blank" rel="noopener noreferrer">Kairos</a> got accepted at NeurIPS'25!</div>
 <div><strong>08/25</strong> Serving on the PC of <a href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">ICLR 2026</a>.</div>
 <div><strong>07/25</strong> Our recent work <a href="https://arxiv.org/pdf/2506.01230" target="_blank" rel="noopener noreferrer">Savage</a> got accepted at VLDB'26!</div>
