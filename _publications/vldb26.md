@@ -6,6 +6,8 @@ excerpt: ''
 date: 2026-01-01
 venue: 'VLDB'
 authors: '<strong>Jiongli Zhu</strong>, Geyang Xu, Felipe Lorenzi, Boris Glavic, Babak Salimi'
+featured: true
+paperurl: 'https://arxiv.org/pdf/2506.01230'
 ---
 **Jiongli Zhu**, Geyang Xu, Felipe Lorenzi, Boris Glavic, Babak Salimi.<br>
 

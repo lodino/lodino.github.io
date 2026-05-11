@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main id="main" class="research-publication" role="main">
+  <article class="research-publication__shell" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <a class="research-publication__back" href="{{ '/publications/' | prepend: base_path }}">All publications</a>
+
+    <header class="research-publication__header">
+      {% if page.venue %}
+        <p class="research-publication__eyebrow">
+          {{ page.venue }}{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}
+        </p>
+      {% endif %}
+
+      <h1 itemprop="headline">{{ page.title }}</h1>
+
+      {% if page.authors %}
+        <p class="research-publication__authors" itemprop="author">{{ page.authors }}</p>
+      {% endif %}
+
+      <div class="research-publication__actions" aria-label="Publication links">
+        {% if page.paperurl %}
+          <a href="{{ page.paperurl }}">Paper</a>
+        {% endif %}
+        <a href="{{ '/publications/' | prepend: base_path }}">Publication list</a>
+      </div>
+    </header>
+
+    <section class="research-publication__abstract" aria-labelledby="abstract-heading" itemprop="abstract">
+      <h2 id="abstract-heading">Abstract</h2>
+      <div class="research-publication__body">
+        {% assign publication_content = content %}
+        {% if page.paperurl %}
+          {% capture paper_link %}<p><a href="{{ page.paperurl }}">Paper</a></p>{% endcapture %}
+          {% capture paper_link_with_break %}<p><br />
+<a href="{{ page.paperurl }}">Paper</a></p>{% endcapture %}
+          {% capture download_link %}<p><a href="{{ page.paperurl }}">Download</a></p>{% endcapture %}
+          {% assign publication_content = publication_content | remove: paper_link | remove: paper_link_with_break | remove: download_link %}
+        {% endif %}
+        {{ publication_content }}
+      </div>
+    </section>
+  </article>
+</main>

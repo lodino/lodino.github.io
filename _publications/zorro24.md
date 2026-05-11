@@ -6,6 +6,8 @@ excerpt: ''
 date: 2024-05-28
 venue: 'NeurIPS'
 authors: '<strong>Jiongli Zhu</strong>, Su Feng, Boris Glavic, Babak Salimi'
+featured: true
+paperurl: 'https://arxiv.org/abs/2405.18549'
 ---
 **Jiongli Zhu**, Su Feng, Boris Glavic, Babak Salimi.<br>
 

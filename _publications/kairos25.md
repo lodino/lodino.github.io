@@ -6,6 +6,8 @@ excerpt: ''
 date: 2025-09-01
 venue: 'NeurIPS'
 authors: '<strong>Jiongli Zhu</strong>*, Parjanya Prajakta Prashant*, Alex Cloninger, Babak Salimi'
+featured: true
+paperurl: 'https://arxiv.org/pdf/2506.23799'
 ---
 **Jiongli Zhu**\*, Parjanya Prajakta Prashant\*, Alex Cloninger, Babak Salimi.<br>
 

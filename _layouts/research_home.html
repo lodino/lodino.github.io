@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main id="main" class="research-home" role="main">
+  <div class="research-home__shell">
+    <aside class="research-home__rail" id="contact" aria-label="Profile and contact">
+      <img
+        class="research-home__portrait"
+        src="{{ '/images/profile.jpeg' | prepend: base_path }}"
+        alt="Jiongli Zhu">
+
+      <div class="research-home__identity">
+        <strong>{{ site.author.name | default: site.title }}</strong>
+        <span>{{ site.author.bio }}</span>
+        <span>Data Science</span>
+        <span>UC San Diego</span>
+      </div>
+
+      <nav class="research-home__links" aria-label="Research profile links">
+        {% if site.author.googlescholar %}
+          <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+        {% endif %}
+        {% if site.author.github %}
+          <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+        {% endif %}
+        {% if site.author.linkedin %}
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+        {% endif %}
+        {% if site.author.email %}
+          <a href="mailto:jiz143@ucsd.edu">{{ site.author.email }}</a>
+        {% endif %}
+      </nav>
+    </aside>
+
+    <div class="research-home__content">
+      <section class="research-home__bio" aria-label="Biography">
+        {{ content }}
+      </section>
+
+      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+      {% if featured_publications.size == 0 %}
+        {% assign featured_publications = site.publications | sort: "date" | reverse %}
+      {% endif %}
+
+      <section class="research-home__section" id="publications" aria-labelledby="selected-publications-heading">
+        <div class="research-home__section-heading">
+          <h2 id="selected-publications-heading">Selected Publications</h2>
+          <a href="{{ '/publications/' | prepend: base_path }}">All publications</a>
+        </div>
+
+        <div class="research-home__publications">
+          {% for post in featured_publications limit: 3 %}
+            <article class="research-home__publication">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
+              <div>
+                <h3><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h3>
+                {% if post.authors %}
+                  <p class="research-home__authors">{{ post.authors }}</p>
+                {% endif %}
+                <p class="research-home__venue">
+                  {{ post.venue }}
+                  {% if post.paperurl %}
+                    <span aria-hidden="true">·</span>
+                    <a href="{{ post.paperurl }}">Paper</a>
+                  {% endif %}
+                </p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="research-home__section" id="news" aria-labelledby="news-heading">
+        <h2 id="news-heading">Recent News</h2>
+        <ol class="research-home__news">
+          {% for item in page.news limit: 6 %}
+            <li>
+              <time>{{ item.date }}</time>
+              <span>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+            </li>
+          {% endfor %}
+        </ol>
+
+        {% if page.news.size > 6 %}
+          <details class="research-home__older-news">
+            <summary>Older news</summary>
+            <ol class="research-home__news">
+              {% for item in page.news offset: 6 %}
+                <li>
+                  <time>{{ item.date }}</time>
+                  <span>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+                </li>
+              {% endfor %}
+            </ol>
+          </details>
+        {% endif %}
+      </section>
+
+      <section class="research-home__section" id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <ul class="research-home__plain-list">
+          {% for item in page.education %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="research-home__section" id="service" aria-labelledby="service-heading">
+        <h2 id="service-heading">Service</h2>
+        <p>{{ page.service_summary }}</p>
+      </section>
+    </div>
+  </div>
+</main>

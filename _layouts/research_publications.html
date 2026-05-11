@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main id="main" class="research-publications" role="main">
+  <div class="research-publications__shell">
+    <header class="research-publications__header">
+      <p class="research-publications__eyebrow">Research</p>
+      <h1>{{ page.title }}</h1>
+      <div class="research-publications__intro">
+        {{ content }}
+      </div>
+    </header>
+
+    {% assign publications = site.publications | sort: "date" | reverse %}
+    <section class="research-publications__list" aria-label="Publication list">
+      {% for post in publications %}
+        <article class="research-publications__item">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
+          <div>
+            <h2><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h2>
+            {% if post.authors %}
+              <p class="research-publications__authors">{{ post.authors }}</p>
+            {% endif %}
+            <p class="research-publications__meta">
+              {{ post.venue }}
+              {% if post.excerpt %}
+                <span class="research-publications__note">{{ post.excerpt | markdownify | strip_html | strip }}</span>
+              {% endif %}
+            </p>
+            <p class="research-publications__links">
+              <a href="{{ post.url | prepend: base_path }}">Details</a>
+              {% if post.paperurl %}
+                <a href="{{ post.paperurl }}">Paper</a>
+              {% endif %}
+            </p>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  </div>
+</main>
