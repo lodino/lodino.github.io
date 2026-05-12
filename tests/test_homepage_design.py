@@ -41,10 +41,11 @@ def test_research_home_layout_exposes_required_sections():
         "limit: 3",
         "page.service_summary",
         "<summary>Expand</summary>",
-        'class="research-home__email">{{ site.author.email }}</span>',
+        'href="mailto:jiz143[AT]ucsd[DOT]edu"',
+        'class="research-home__email"',
+        ">Email</a>",
     )
     assert "Older news" not in layout
-    assert "mailto:" not in layout
     assert "jiz143@ucsd.edu" not in layout
     assert "research-home__service-list" not in layout
 
@@ -122,7 +123,7 @@ def test_footer_has_no_legacy_follow_or_sitemap_clutter():
     assert "feed.xml" not in head
 
 
-def test_email_is_masked_without_mailto_links():
+def test_email_uses_masked_mailto_without_raw_address():
     config = read("_config.yml")
     home_layout = read("_layouts/research_home.html")
     author_profile = read("_includes/author-profile.html")
@@ -133,11 +134,16 @@ def test_email_is_masked_without_mailto_links():
     )
     assert_contains(
         home_layout,
-        'class="research-home__email">{{ site.author.email }}</span>',
+        'href="mailto:jiz143[AT]ucsd[DOT]edu"',
+        'class="research-home__email"',
+        ">Email</a>",
     )
-    assert "mailto:" not in home_layout
+    assert_contains(
+        author_profile,
+        'href="mailto:jiz143[AT]ucsd[DOT]edu"',
+    )
     assert "jiz143@ucsd.edu" not in home_layout
-    assert "mailto:" not in author_profile
+    assert "jiz143@ucsd.edu" not in author_profile
 
 
 def test_jekyll_excludes_non_site_source_directories():
@@ -239,7 +245,7 @@ if __name__ == "__main__":
     test_publication_details_use_constructed_layout()
     test_cv_page_uses_constructed_layout()
     test_footer_has_no_legacy_follow_or_sitemap_clutter()
-    test_email_is_masked_without_mailto_links()
+    test_email_uses_masked_mailto_without_raw_address()
     test_mint_publication_is_present()
     test_jekyll_excludes_non_site_source_directories()
     test_only_active_profile_image_remains()
