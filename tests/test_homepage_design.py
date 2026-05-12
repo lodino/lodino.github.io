@@ -85,6 +85,24 @@ def test_publication_details_use_constructed_layout():
     )
 
 
+def test_cv_page_uses_constructed_layout():
+    cv = read("_pages/cv.md")
+    layout = read("_layouts/research_page.html")
+
+    assert_contains(
+        cv,
+        "layout: research_page",
+        "author_profile: false",
+        "permalink: /cv/",
+    )
+    assert_contains(
+        layout,
+        'class="research-page"',
+        'class="research-page__content"',
+        "{{ content }}",
+    )
+
+
 def test_footer_has_no_legacy_follow_or_sitemap_clutter():
     footer = read("_includes/footer.html")
     custom_footer = read("_includes/footer/custom.html")
@@ -181,6 +199,7 @@ def test_homepage_styles_are_imported_and_responsive():
     assert_contains(
         home_scss,
         ".research-home",
+        "font-size: 16px",
         ".greedy-nav",
         "button {",
         "grid-template-columns",
@@ -195,6 +214,7 @@ if __name__ == "__main__":
     test_research_home_layout_exposes_required_sections()
     test_publications_page_uses_constructed_layout()
     test_publication_details_use_constructed_layout()
+    test_cv_page_uses_constructed_layout()
     test_footer_has_no_legacy_follow_or_sitemap_clutter()
     test_mint_publication_is_present()
     test_jekyll_excludes_non_site_source_directories()

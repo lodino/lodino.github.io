@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main id="main" class="research-page" role="main">
+  <article class="research-page__shell">
+    {% if page.title %}
+      <header class="research-page__header">
+        <h1>{{ page.title }}</h1>
+      </header>
+    {% endif %}
+
+    <section class="research-page__content">
+      {{ content }}
+    </section>
+  </article>
+</main>
