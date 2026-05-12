@@ -40,7 +40,9 @@ def test_research_home_layout_exposes_required_sections():
         "site.publications",
         "limit: 3",
         "page.service_summary",
+        "<summary>Expand</summary>",
     )
+    assert "Older news" not in layout
     assert "research-home__service-list" not in layout
 
 
