@@ -36,9 +36,12 @@ def test_research_home_layout_exposes_required_sections():
         'class="research-home__bio"',
         'id="publications"',
         'id="news"',
+        'id="experience"',
         'id="service"',
         "site.publications",
         "limit: 3",
+        "page.experience",
+        'class="research-home__experience"',
         "page.service_summary",
         "<summary>Expand</summary>",
         'href="mailto:jiz143[AT]ucsd[DOT]edu"',
@@ -48,6 +51,37 @@ def test_research_home_layout_exposes_required_sections():
     assert "Older news" not in layout
     assert "jiz143@ucsd.edu" not in layout
     assert "research-home__service-list" not in layout
+
+
+def test_homepage_lists_industrial_experience():
+    about = read("_pages/about.md")
+    styles = read("_sass/_research-home.scss")
+
+    assert_contains(
+        about,
+        "experience:",
+        "Autopilot AI Engineer Intern",
+        "Tesla",
+        "Mid-training, SFT, and RL for the FSD model",
+        "Research Scientist Intern",
+        "Snowflake",
+        "Agentic Text2SQL systems",
+        "Machine Learning Scientist Intern",
+        "TikTok",
+        "Generative recommender system",
+        "Research Intern",
+        "Microsoft",
+        "Vector databases",
+        "Data Scientist Intern",
+        "Amazon",
+        "Time series anomaly detection",
+    )
+    assert_contains(
+        styles,
+        ".research-home__experience",
+        ".research-home__experience-title",
+        ".research-home__experience-meta",
+    )
 
 
 def test_publications_page_uses_constructed_layout():
@@ -241,6 +275,7 @@ def test_homepage_styles_are_imported_and_responsive():
 if __name__ == "__main__":
     test_homepage_uses_dedicated_research_layout()
     test_research_home_layout_exposes_required_sections()
+    test_homepage_lists_industrial_experience()
     test_publications_page_uses_constructed_layout()
     test_publication_details_use_constructed_layout()
     test_cv_page_uses_constructed_layout()

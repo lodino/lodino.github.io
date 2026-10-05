@@ -99,6 +99,27 @@ layout: default
         {% endif %}
       </section>
 
+      <section class="research-home__section" id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+        <div class="research-home__experience">
+          {% for item in page.experience %}
+            <article class="research-home__experience-item">
+              <time>{{ item.period }}</time>
+              <div>
+                <h3 class="research-home__experience-title">{{ item.role }}</h3>
+                <p class="research-home__experience-meta">
+                  {{ item.company }}{% if item.type %} · {{ item.type }}{% endif %}
+                </p>
+                {% if item.location %}
+                  <p class="research-home__experience-location">{{ item.location }}</p>
+                {% endif %}
+                <p class="research-home__experience-focus">{{ item.focus }}</p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
       <section class="research-home__section" id="education" aria-labelledby="education-heading">
         <h2 id="education-heading">Education</h2>
         <ul class="research-home__plain-list">
