@@ -104,7 +104,14 @@ layout: default
         <div class="research-home__experience">
           {% for item in page.experience %}
             <article class="research-home__experience-item">
-              <time>{{ item.period }}</time>
+              <div class="research-home__experience-rail">
+                {% if item.logo %}
+                  <span class="research-home__experience-mark research-home__experience-mark--{{ item.logo_class | default: 'default' }}">
+                    {{ item.logo }}
+                  </span>
+                {% endif %}
+                <time>{{ item.period }}</time>
+              </div>
               <div>
                 <h3 class="research-home__experience-title">{{ item.role }}</h3>
                 <p class="research-home__experience-meta">
