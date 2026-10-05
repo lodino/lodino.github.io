@@ -80,23 +80,32 @@ def test_homepage_lists_industrial_experience():
         "Data Scientist Intern",
         "Amazon Web Services",
         'logo_path: "/images/logos/aws.svg"',
+        'logo_variant: "wide"',
         "Time series anomaly detection",
     )
     assert_contains(
         styles,
         ".research-home__experience",
+        ".research-home__experience-logo-tile",
         ".research-home__experience-logo",
-        ".research-home__experience-rail",
+        ".research-home__experience-mark",
+        ".research-home__experience-body",
+        ".research-home__experience-period",
         ".research-home__experience-title",
         ".research-home__experience-meta",
     )
     layout = read("_layouts/research_home.html")
     assert_contains(
         layout,
+        'class="research-home__experience-logo-tile research-home__experience-logo-tile--{{ item.logo_variant | default: \'square\' }}"',
         'class="research-home__experience-logo"',
         'src="{{ item.logo_path | relative_url }}"',
         'alt="{{ item.company }} logo"',
+        'class="research-home__experience-period"',
     )
+    assert "location:" not in about
+    assert "research-home__experience-location" not in layout
+    assert "research-home__experience-location" not in styles
 
 
 def test_publications_page_uses_constructed_layout():

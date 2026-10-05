@@ -263,33 +263,62 @@
 
 .research-home__experience {
   display: grid;
-  gap: 0.95rem;
+  gap: 1.05rem;
 }
 
 .research-home__experience-item {
   display: grid;
-  grid-template-columns: 7.75rem minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: 3rem minmax(0, 1fr) 8.5rem;
+  column-gap: 1rem;
+  align-items: start;
 }
 
-.research-home__experience-rail {
-  display: grid;
-  gap: 0.35rem;
-  align-content: start;
+.research-home__experience-mark {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
-  time {
-    color: #7a6f63;
-    font-size: 0.8125em;
-    line-height: 1.45;
-  }
+.research-home__experience-logo-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #e4ddd2;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(31, 35, 40, 0.03);
+}
+
+.research-home__experience-logo-tile--wide {
+  width: 4.6rem;
 }
 
 .research-home__experience-logo {
   display: block;
-  width: 5.25rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   object-fit: contain;
-  object-position: left center;
+}
+
+.research-home__experience-logo-tile--wide .research-home__experience-logo {
+  width: 3.85rem;
+  height: 1.75rem;
+}
+
+.research-home__experience-body {
+  min-width: 0;
+}
+
+.research-home__experience-period {
+  justify-self: end;
+  color: #7a6f63;
+  font-size: 0.8125em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .research-home__experience-title {
@@ -301,7 +330,6 @@
 }
 
 .research-home__experience-meta,
-.research-home__experience-location,
 .research-home__experience-focus {
   margin: 0.2rem 0 0 !important;
   font-size: 0.8125em !important;
@@ -312,12 +340,9 @@
   color: #27656a !important;
 }
 
-.research-home__experience-location {
-  color: #6b7280 !important;
-}
-
 .research-home__experience-focus {
   color: #4b5563 !important;
+  margin-top: 0.24rem !important;
 }
 
 .research-home__plain-list {
@@ -362,9 +387,21 @@
 @media (max-width: 430px) {
   .research-home__rail,
   .research-home__publication,
-  .research-home__experience-item,
   .research-home__news li {
     grid-template-columns: 1fr;
+  }
+
+  .research-home__experience-item {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    column-gap: 0.85rem;
+  }
+
+  .research-home__experience-period {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    margin-top: 0.2rem;
+    text-align: left;
   }
 
   .research-home__section-heading {

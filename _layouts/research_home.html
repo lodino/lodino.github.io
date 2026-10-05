@@ -104,25 +104,24 @@ layout: default
         <div class="research-home__experience">
           {% for item in page.experience %}
             <article class="research-home__experience-item">
-              <div class="research-home__experience-rail">
+              <div class="research-home__experience-mark">
                 {% if item.logo_path %}
-                  <img
-                    class="research-home__experience-logo"
-                    src="{{ item.logo_path | relative_url }}"
-                    alt="{{ item.company }} logo">
+                  <span class="research-home__experience-logo-tile research-home__experience-logo-tile--{{ item.logo_variant | default: 'square' }}">
+                    <img
+                      class="research-home__experience-logo"
+                      src="{{ item.logo_path | relative_url }}"
+                      alt="{{ item.company }} logo">
+                  </span>
                 {% endif %}
-                <time>{{ item.period }}</time>
               </div>
-              <div>
+              <div class="research-home__experience-body">
                 <h3 class="research-home__experience-title">{{ item.role }}</h3>
                 <p class="research-home__experience-meta">
                   {{ item.company }}{% if item.type %} · {{ item.type }}{% endif %}
                 </p>
-                {% if item.location %}
-                  <p class="research-home__experience-location">{{ item.location }}</p>
-                {% endif %}
                 <p class="research-home__experience-focus">{{ item.focus }}</p>
               </div>
+              <time class="research-home__experience-period">{{ item.period }}</time>
             </article>
           {% endfor %}
         </div>
