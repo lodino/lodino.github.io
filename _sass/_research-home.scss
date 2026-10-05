@@ -283,28 +283,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid #e4ddd2;
-  border-radius: 7px;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(31, 35, 40, 0.03);
-}
-
-.research-home__experience-logo-tile--wide {
-  width: 4.6rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .research-home__experience-logo {
   display: block;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
 }
 
 .research-home__experience-logo-tile--wide .research-home__experience-logo {
-  width: 3.85rem;
-  height: 1.75rem;
+  width: 3rem;
 }
 
 .research-home__experience-body {
