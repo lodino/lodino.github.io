@@ -15,6 +15,7 @@ experience:
   - role: "Autopilot AI Engineer Intern"
     company: "Tesla AI"
     logo_path: "/images/logos/tesla.svg"
+    logo_variant: "tesla"
     type: "Full-time"
     period: "Jun 2026 - Sep 2026"
     focus: "Mid-training, SFT, and RL for the FSD model"
