@@ -32,6 +32,7 @@ def test_research_home_layout_exposes_required_sections():
         'class="research-home"',
         'class="research-home__rail"',
         'class="research-home__portrait"',
+        "relative_url",
         'alt="Jiongli Zhu"',
         'class="research-home__bio"',
         'id="publications"',
@@ -62,37 +63,39 @@ def test_homepage_lists_industrial_experience():
         "experience:",
         "Autopilot AI Engineer Intern",
         "Tesla AI",
+        'logo_path: "/images/logos/tesla.svg"',
         "Mid-training, SFT, and RL for the FSD model",
         "Research Scientist Intern",
         "Snowflake AI Research",
+        'logo_path: "/images/logos/snowflake.svg"',
         "Agentic Text2SQL systems",
         "Machine Learning Scientist Intern",
         "TikTok",
+        'logo_path: "/images/logos/tiktok.svg"',
         "Generative recommender system",
         "Research Intern",
         "Microsoft Research",
+        'logo_path: "/images/logos/microsoft.svg"',
         "Vector databases",
         "Data Scientist Intern",
         "Amazon Web Services",
+        'logo_path: "/images/logos/aws.svg"',
         "Time series anomaly detection",
-        'logo_class: "tesla"',
-        'logo_class: "snowflake"',
-        'logo_class: "tiktok"',
-        'logo_class: "microsoft"',
-        'logo_class: "aws"',
     )
     assert_contains(
         styles,
         ".research-home__experience",
-        ".research-home__experience-mark",
+        ".research-home__experience-logo",
         ".research-home__experience-rail",
         ".research-home__experience-title",
         ".research-home__experience-meta",
-        ".research-home__experience-mark--tesla",
-        ".research-home__experience-mark--snowflake",
-        ".research-home__experience-mark--tiktok",
-        ".research-home__experience-mark--microsoft",
-        ".research-home__experience-mark--aws",
+    )
+    layout = read("_layouts/research_home.html")
+    assert_contains(
+        layout,
+        'class="research-home__experience-logo"',
+        'src="{{ item.logo_path | relative_url }}"',
+        'alt="{{ item.company }} logo"',
     )
 
 
@@ -209,8 +212,15 @@ def test_jekyll_excludes_non_site_source_directories():
 
 
 def test_only_active_profile_image_remains():
-    image_files = sorted(path.name for path in (ROOT / "images").iterdir() if path.is_file())
-    assert image_files == ["profile.jpeg"]
+    image_files = sorted(str(path.relative_to(ROOT / "images")) for path in (ROOT / "images").rglob("*") if path.is_file())
+    assert image_files == [
+        "logos/aws.svg",
+        "logos/microsoft.svg",
+        "logos/snowflake.svg",
+        "logos/tesla.svg",
+        "logos/tiktok.svg",
+        "profile.jpeg",
+    ]
 
 
 def test_mint_publication_is_present():

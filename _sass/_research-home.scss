@@ -284,47 +284,11 @@
   }
 }
 
-.research-home__experience-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  max-width: 7.25rem;
-  min-height: 1.55rem;
-  padding: 0.18rem 0.45rem;
-  border: 1px solid #e1d9cc;
-  border-radius: 5px;
-  background: #fff;
-  color: #2f3742;
-  font-size: 0.6875em;
-  font-weight: 760;
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-}
-
-.research-home__experience-mark--tesla {
-  border-color: rgba(220, 38, 38, 0.24);
-  color: #b91c1c;
-}
-
-.research-home__experience-mark--snowflake {
-  border-color: rgba(2, 132, 199, 0.22);
-  color: #047aa3;
-}
-
-.research-home__experience-mark--tiktok {
-  border-color: rgba(17, 24, 39, 0.18);
-  color: #111827;
-}
-
-.research-home__experience-mark--microsoft {
-  border-color: rgba(74, 85, 104, 0.2);
-  color: #374151;
-}
-
-.research-home__experience-mark--aws {
-  border-color: rgba(245, 158, 11, 0.28);
-  color: #b45309;
+.research-home__experience-logo {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
 }
 
 .research-home__experience-title {

@@ -9,7 +9,7 @@ layout: default
     <aside class="research-home__rail" id="contact" aria-label="Profile and contact">
       <img
         class="research-home__portrait"
-        src="{{ '/images/profile.jpeg' | prepend: base_path }}"
+        src="{{ '/images/profile.jpeg' | relative_url }}"
         alt="Jiongli Zhu">
 
       <div class="research-home__identity">
@@ -105,10 +105,11 @@ layout: default
           {% for item in page.experience %}
             <article class="research-home__experience-item">
               <div class="research-home__experience-rail">
-                {% if item.logo %}
-                  <span class="research-home__experience-mark research-home__experience-mark--{{ item.logo_class | default: 'default' }}">
-                    {{ item.logo }}
-                  </span>
+                {% if item.logo_path %}
+                  <img
+                    class="research-home__experience-logo"
+                    src="{{ item.logo_path | relative_url }}"
+                    alt="{{ item.company }} logo">
                 {% endif %}
                 <time>{{ item.period }}</time>
               </div>
