@@ -7,7 +7,6 @@ date: 2026-05-20
 venue: 'arXiv preprint'
 preprint: true
 authors: '<strong>Jiongli Zhu*</strong>, Haoquan Guan*, Parjanya Prajakta Prashant*, Nikki Lijing Kuang, Seyedeh Baharan Khatami, Canwen Xu, Xiaodong Yu, Yingyu Lin, Zhewei Yao, Yuxiong He, Babak Salimi'
-author_note: '* Equal contribution.'
 paperurl: 'https://arxiv.org/abs/2605.21792'
 content_heading: 'Summary'
 ---

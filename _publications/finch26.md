@@ -7,7 +7,6 @@ date: 2026-05-19
 venue: 'arXiv preprint'
 preprint: true
 authors: 'Parjanya Prajakta Prashant*, <strong>Jiongli Zhu*</strong>, Aldan Creo, Babak Salimi'
-author_note: '* Equal contribution.'
 paperurl: 'https://arxiv.org/abs/2605.20005'
 content_heading: 'Summary'
 ---
