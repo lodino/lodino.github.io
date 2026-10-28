@@ -15,14 +15,27 @@ layout: default
     </header>
 
     {% assign publications = site.publications | sort: "date" | reverse %}
-    <section class="research-publications__list" aria-label="Publication list">
-      {% for post in publications %}
+    {% assign groups = "Publications,Preprints" | split: "," %}
+    {% for group in groups %}
+      {% if group == "Preprints" %}
+        {% assign entries = publications | where: "preprint", true %}
+      {% else %}
+        {% assign entries = publications | where_exp: "post", "post.preprint != true" %}
+      {% endif %}
+      {% if entries.size > 0 %}
+      <section class="research-publications__group" id="{{ group | downcase }}" aria-labelledby="{{ group | downcase }}-heading">
+        <h2 class="research-publications__group-heading" id="{{ group | downcase }}-heading">{{ group }}</h2>
+        <div class="research-publications__list">
+      {% for post in entries %}
         <article class="research-publications__item">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
           <div>
-            <h2><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h2>
+            <h3><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h3>
             {% if post.authors %}
               <p class="research-publications__authors">{{ post.authors }}</p>
+            {% endif %}
+            {% if post.author_note %}
+              <p class="research-publications__authors">{{ post.author_note }}</p>
             {% endif %}
             <p class="research-publications__meta">
               {{ post.venue }}
@@ -35,10 +48,16 @@ layout: default
               {% if post.paperurl %}
                 <a href="{{ post.paperurl }}">Paper</a>
               {% endif %}
+              {% if post.conferenceurl %}
+                <a href="{{ post.conferenceurl }}">Conference</a>
+              {% endif %}
             </p>
           </div>
         </article>
       {% endfor %}
-    </section>
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
   </div>
 </main>

@@ -40,9 +40,10 @@ layout: default
         {{ content }}
       </section>
 
-      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+      {% assign published_publications = site.publications | where_exp: "post", "post.preprint != true" %}
+      {% assign featured_publications = published_publications | where: "featured", true | sort: "date" | reverse %}
       {% if featured_publications.size == 0 %}
-        {% assign featured_publications = site.publications | sort: "date" | reverse %}
+        {% assign featured_publications = published_publications | sort: "date" | reverse %}
       {% endif %}
 
       <section class="research-home__section" id="publications" aria-labelledby="selected-publications-heading">
@@ -60,11 +61,17 @@ layout: default
                 {% if post.authors %}
                   <p class="research-home__authors">{{ post.authors }}</p>
                 {% endif %}
+                {% if post.author_note %}
+                  <p class="research-home__authors">{{ post.author_note }}</p>
+                {% endif %}
                 <p class="research-home__venue">
                   {{ post.venue }}
                   {% if post.paperurl %}
                     <span aria-hidden="true">·</span>
                     <a href="{{ post.paperurl }}">Paper</a>
+                  {% elsif post.conferenceurl %}
+                    <span aria-hidden="true">·</span>
+                    <a href="{{ post.conferenceurl }}">Conference</a>
                   {% endif %}
                 </p>
               </div>
@@ -72,6 +79,38 @@ layout: default
           {% endfor %}
         </div>
       </section>
+
+      {% assign preprints = site.publications | where: "preprint", true | sort: "date" | reverse %}
+      {% if preprints.size > 0 %}
+        <section class="research-home__section" id="preprints" aria-labelledby="preprints-heading">
+          <div class="research-home__section-heading">
+            <h2 id="preprints-heading">Preprints</h2>
+          </div>
+          <div class="research-home__publications">
+            {% for post in preprints %}
+              <article class="research-home__publication">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
+                <div>
+                  <h3><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h3>
+                  {% if post.authors %}
+                    <p class="research-home__authors">{{ post.authors }}</p>
+                  {% endif %}
+                  {% if post.author_note %}
+                    <p class="research-home__authors">{{ post.author_note }}</p>
+                  {% endif %}
+                  <p class="research-home__venue">
+                    {{ post.venue }}
+                    {% if post.paperurl %}
+                      <span aria-hidden="true">·</span>
+                      <a href="{{ post.paperurl }}">Paper</a>
+                    {% endif %}
+                  </p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
 
       <section class="research-home__section" id="news" aria-labelledby="news-heading">
         <h2 id="news-heading">Recent News</h2>

@@ -21,17 +21,24 @@ layout: default
         <p class="research-publication__authors" itemprop="author">{{ page.authors }}</p>
       {% endif %}
 
+      {% if page.author_note %}
+        <p class="research-publication__authors">{{ page.author_note }}</p>
+      {% endif %}
+
       <div class="research-publication__actions" aria-label="Publication links">
         {% if page.paperurl %}
           <a href="{{ page.paperurl }}">Paper</a>
+        {% endif %}
+        {% if page.conferenceurl %}
+          <a href="{{ page.conferenceurl }}">Conference</a>
         {% endif %}
         <a href="{{ '/publications/' | prepend: base_path }}">Publication list</a>
       </div>
     </header>
 
-    <section class="research-publication__abstract" aria-labelledby="abstract-heading" itemprop="abstract">
-      <h2 id="abstract-heading">Abstract</h2>
-      <div class="research-publication__body">
+    <section class="research-publication__abstract" aria-labelledby="abstract-heading"{% unless page.content_heading %} itemprop="abstract"{% endunless %}>
+      <h2 id="abstract-heading">{{ page.content_heading | default: "Abstract" }}</h2>
+      <div class="research-publication__body{% unless page.content_heading %} research-publication__body--with-author-line{% endunless %}">
         {% assign publication_content = content %}
         {% if page.paperurl %}
           {% capture paper_link %}<p><a href="{{ page.paperurl }}">Paper</a></p>{% endcapture %}

@@ -467,6 +467,16 @@
   }
 }
 
+.research-publications__group + .research-publications__group {
+  margin-top: 2rem;
+}
+
+.research-publications__group-heading {
+  margin: 0 0 0.875rem;
+  font-size: 1em;
+  line-height: 1.35;
+}
+
 .research-publications__list {
   display: grid;
   gap: 1.15rem;
@@ -490,7 +500,7 @@
     line-height: 1.4;
   }
 
-  h2 {
+  h3 {
     margin: 0;
     color: #1f2328;
     font-size: 0.98em;
@@ -634,7 +644,7 @@
   font-size: 0.96875em;
   line-height: 1.72;
 
-  > p:first-child {
+  &--with-author-line > p:first-child {
     display: none;
   }
 
